@@ -29,6 +29,12 @@ header img {
     
 }
 
+img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+
 #music {
     float: left;
     display: inline;
@@ -84,65 +90,130 @@ header img {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 500px;
+    height: 450px;
     background-color: lightsteelblue;
     justify-content: space-evenly;
 }
 
-#box1 {
+#box-primary {
     flex: 1 15%;
     border-right: 2px solid green;
-    height: 120px;
-}
-
-#box1 p {
-    font-style: italic;
-    font-size: 38px;
-    margin-top: 30px;
-    margin-left: 50px;
-}
-
-#box2 {
-    flex: 80%;
     height: 100px;
-    margin-top: 30px;
-}
-
-#box2 p {
-    font-size: 24px;
-    padding-left: 20px;
-}
-
-#box3 {
-    flex: 1 15%;
-    border-right: 2px solid green;
-    height: 120px;
-    margin-top: 150px;
-}
-
-#box3 p {
     font-style: italic;
     font-size: 38px;
     margin-top: 30px;
     margin-left: 50px;
+    margin-bottom: 150px;
 }
 
-#box4 {
+#box-secondary {
     flex: 1 80%;
     height: 100px;
-    margin-top: 180px;
-}
-
-#box4 p {
+    margin-top: 36px;
     font-size: 24px;
     padding-left: 20px;
 }
 
-#box4 a {
-    padding-left: 30px;
+#box-secondary a {
+    margin-left: 30px;
+    text-decoration: none;
 }
 
+#box-secondary a:hover {
+    background-color: yellow;
+    border-radius: 5px;
+}
+
+#box-secondary ul li {
+    margin: 0 0 20px 20px;
+}
+
+#box-secondary ul li a {
+    text-decoration: none;
+}
+
+#box-secondary ul li a:hover {
+    background-color: plum;
+    border-radius: 20px;
+}
 footer {
     font-size: 32px;
     text-align: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 995px) {
+    header img {
+        width: 95px;
+        height: 95px;
+}
+
+#box-primary {
+    font-size: 20px;
+}
+
+#box-secondary {
+    font-size: 20px;
+}
+
+#box-secondary ul li {
+    font-size: 17px;
+}
+
+
+@media screen and (max-width: 768px) {
+    header img {
+        width: 80px;
+        height: 80px;
+}
+
+    .links {
+        flex-direction: column;
+}
+
+    .parent {
+        flex-direction: column;
+        width: 70%;
+        height: 70%;
+        margin-top: 80px;
+}
+
+@media screen and (max-width: 575px) {
+    header {width: 100%;
+}
+
+    header img {
+        width: 60px;
+        height: 60px;
+}
+
+    .links {
+        flex-direction: column;
+}
+
+    .links a {
+        color: red;
+}
+
+    .parent {
+        flex-direction: column;
+        width: 50%;
+        height: 50%;
+        margin-top: 130px;
+    }
+
+    #box-primary {
+        border: none;
+        width: 30%;
+        font-size: 16px;
+}
+
+    #box-secondary {
+        width: 50%;
+        font-size: 16px;
+}
+
+    footer {
+        font-size: 12px;
+        color: violet;
 }
